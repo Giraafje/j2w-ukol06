@@ -13,7 +13,7 @@ import org.hibernate.validator.constraints.Length;
 public class Vizitka {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Integer id;
 
   @Length(max = 100)
   @NotBlank
@@ -49,7 +49,7 @@ public class Vizitka {
   //class constructor
   public Vizitka() {}
 
-  public Vizitka(Long id, String celeJmeno, String firma, String ulice, String obec, String psc, String email, String telefon, String web) {
+  public Vizitka(Integer id, String celeJmeno, String firma, String ulice, String obec, String psc, String email, String telefon, String web) {
     this.id = id;
     this.celeJmeno = celeJmeno;
     this.firma = firma;
@@ -61,11 +61,11 @@ public class Vizitka {
     this.web = web;
   }
 
-  public Long getId() {
+  public Integer getId() {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(Integer id) {
     this.id = id;
   }
 
@@ -82,7 +82,7 @@ public class Vizitka {
   }
 
   public String getObec() {
-    return ulice;
+    return obec;
   }
 
   public String getEmail() {

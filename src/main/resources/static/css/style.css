@@ -47,6 +47,7 @@ a {
     border: 3px dotted white;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 a:hover .vizitka {
@@ -135,4 +136,27 @@ input {
 
 .error {
     color: red;
+}
+
+.empty {
+    font-size: 72px;
+    text-align: center;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 10rem auto;
+    padding: 0.5em;
+    box-shadow: 5px 5px 10px black;
+    max-width: 65rem;
+}
+
+.notfound {
+    font-size: 72px;
+    text-align: center;
+    color: red;
+    border: 1px solid gray;
+    background-color: white;
+    margin: 10rem auto;
+    padding: 0.5em;
+    box-shadow: 5px 5px 10px black;
+    max-width: 65rem;
 }

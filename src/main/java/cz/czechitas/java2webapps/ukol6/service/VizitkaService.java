@@ -5,6 +5,8 @@ import cz.czechitas.java2webapps.ukol6.repository.VizitkaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class VizitkaService {
   private final VizitkaRepository vizitkaRepository;
@@ -23,8 +25,8 @@ public class VizitkaService {
     return new Vizitka();
   }
 
-  public Vizitka getById(long id) {
-    return vizitkaRepository.findById(id).orElse(null);
+  public Optional<Vizitka> getById(Integer id) {
+    return vizitkaRepository.findById(id);
   }
 
   public Vizitka append(Vizitka vizitka) {
@@ -33,7 +35,7 @@ public class VizitkaService {
     return vizitka;
   }
 
-  public void deleteById(long id) {
+  public void deleteById(Integer id) {
     vizitkaRepository.deleteById(id);
   }
 }
