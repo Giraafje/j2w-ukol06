@@ -51,9 +51,15 @@ public class VizitkaController {
 
   @GetMapping("/{id:[0-9]+}")
   public ModelAndView detail(@PathVariable Integer id) {
-    var vizitkaModelAndView = new ModelAndView("vizitka");
+    ModelAndView vizitkaModelAndView = new ModelAndView("vizitka");
     return vizitkaService.getById(id)
         .map(vizitka -> vizitkaModelAndView.addObject("vizitka", vizitka))
         .orElse(new ModelAndView("error", HttpStatus.NOT_FOUND));
+  }
+
+  @PostMapping(value = "/{id:[0-9]+}", params = "akce=smazat")
+  public String smazat(@PathVariable Integer id) {
+    vizitkaService.deleteById(id);
+    return "redirect:/";
   }
 }

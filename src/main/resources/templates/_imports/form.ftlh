@@ -9,9 +9,9 @@
 [/#macro]
 
 [#macro input name label type="text" attributes...]
-    <div class="row">
-        <label for="${name}">${label}</label>
-        <input type="${type}" id="${name}" name="${name}" value="${bind[name]!}" [@attrs attributes /]>
+    <div class="col-md-12 mb-2">
+        <label for="${name}" class="form-label">${label}</label>
+        <input type="${type}" class="form-control" id="${name}" name="${name}" value="${bind[name]!}" [@attrs attributes /]>
         [@errors name=name /]
     </div>
 [/#macro]

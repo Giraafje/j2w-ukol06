@@ -11,7 +11,7 @@
             [@form.input name="telefon" label="Telefon *" maxlength="100" required="required" type="tel" /]
             [@form.input name="web" label="Web *" maxlength="100" required="required" type="url" /]
             <div class="form-controls">
-                <button type="submit">Odeslat</button>
+                <button type="submit" class="btn btn-primary">Odeslat</button>
             </div>
         [/@form.form]
 
